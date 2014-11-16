@@ -15,7 +15,7 @@
 }
 #signup{
 	background-image: url(../graphics_index/signup.png);
-	width: 85px;
+	width: 65px;
 	height: 40px;
 	border-radius: 5px;	
 }
