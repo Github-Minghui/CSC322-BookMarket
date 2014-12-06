@@ -1,5 +1,5 @@
 <?php
-	session_start();
-
-	require 'database/connect.php';	
+session_start();
+error_reporting(0);
+require 'database/connect.php';	
 ?>

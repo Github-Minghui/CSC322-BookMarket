@@ -1,4 +1,7 @@
-<?php include 'includes/overall/header.php';?>
+<?php 
+include 'core/init.php';
+include 'includes/overall/header.php';
+?>
     <!-- Content of page -->
 <div class= "row">
   <div class="col-md-12">
