@@ -1,19 +1,22 @@
-    <div class="panel panel-primary">    <!-- Start of Recommandations -->
-      <div class="panel-heading">
-        <h4>Login to Libro.</h4>
-      </div>
-        <ul class="list-group">
-          <li class="list-group-item">
-            Email:
-            <input type="text" class="form-control"  placeholder="Username/email">
-          </li>
-          <li class="list-group-item">
-          Password: 
-          <input type="text" class="form-control"  placeholder="Password">
-          </li>  
-          <li class="list-group-item">
-            <button type="submit" class="btn btn-default" > Login</button>
-            <!-- <button type="submit" class="btn btn-default"> Join Libro!</button> -->
-          </li>
-        </ul>
-    </div>
+<div class="panel panel-primary">    <!-- Start of Recommandations -->
+  <div class="panel-heading">
+	<h4>Login to Libro.</h4>
+  </div>
+  <form action="login.php" method="post">
+	  <li class="list-group-item">
+		username/email:<br>
+		<input type="text" name ="username" class="form-control"  placeholder="username/email">
+	  </li>
+	  <li class="list-group-item">
+		Password:<input type="password" name="password" class="form-control"  placeholder="Password">
+	  </li>  
+	  <li class="list-group-item">
+		<button type="submit" value="Log in" class="btn btn-default" > Login</button>
+		<!-- <button type="submit" class="btn btn-default"> Join Libro!</button> -->
+	  </li>
+	  <li class="list-group-item">
+		<a href="register.php"> Register</a>
+	  </li>
+	  
+	</form>
+</div>

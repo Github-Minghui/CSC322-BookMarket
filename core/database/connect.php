@@ -1,4 +1,5 @@
 <?php
-	mysql_connect('localhst','mysql-ross','123');
-	mysql_select_db('mysql-ross');
+	$connect_error ="Sorry, connect failed.";
+	mysql_connect('localhost','csc322','123') or die ($connect_error);
+	mysql_select_db('csc322') or die ($connect_error);
 ?>
