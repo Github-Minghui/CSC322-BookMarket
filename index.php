@@ -15,8 +15,9 @@ include 'includes/overall/header.php';
     <?php include 'includes/widgets/recommendation.php';?>
   </div>  <!-- ./.col-md-8 -->
 
+
   <div class="col-md-4 col-xs-4 ">
-    <?php include 'includes/widgets/login.php';?>
+    <?php include 'includes/aside.php';?>
   </div><!-- .col-sm-4 -->
 
   <div class="col-md-8 col-xs-8">   

@@ -8,11 +8,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Libros</a>
+      <a class="navbar-brand" href="index.php">Libros</a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-      	<li><a href="#">Home</a></li>
+      	<li><a href="index.php">Home</a></li>
         
         <li role="presentation" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="true">Buy a Book <span class="caret"></span></a>
         <ul class="dropdown-menu" role="menu">

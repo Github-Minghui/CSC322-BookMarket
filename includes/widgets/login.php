@@ -1,4 +1,4 @@
-<div class="panel panel-primary">    <!-- Start of Recommandations -->
+
   <div class="panel-heading">
 	<h4>Login to Libro.</h4>
   </div>
@@ -19,4 +19,3 @@
 	  </li>
 	  
 	</form>
-</div>
