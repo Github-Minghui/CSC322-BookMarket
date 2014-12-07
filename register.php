@@ -24,9 +24,11 @@ if (empty($_POST) ===false){
 		if ($_POST['password'] !== $_POST['password_again']) {
 			$errors[] ='Your passwords do not match';
 		}
+		if (email_exists($_POST['email'])===true){
+			$errors[]='Sorry, the email \'' . $_POST['email'] . '\' is already in use.';
+		}
 	}
 }
-print_r($errors);
 ?>
 <div class="row">
 	<div class= "panel panel-info col-md-12">
@@ -34,7 +36,28 @@ print_r($errors);
 	   <h3>Register</h3>
 	  </div>
 	</div>
-  <br>	
+	<br>	
+	
+<?php 
+	if (isset($_GET['success']) && empty($_GET['success'])){
+		echo 'You\'ve been registered successfully!';
+	} else{
+		if (empty($_POST) ===false && empty($errors) === false){
+			$register_data = array(
+				'username' 		=> $_POST['username'],
+				'password' 		=> $_POST['password'],
+				'first_name' 	=> $_POST['first_name'],
+				'last_name' 	=> $_POST['last_name'],
+				'email' 		=> $_POST['email'],
+			);
+			register_user($register_data);
+			header('Location: register.php?success');
+			exit();
+		} else if (empty($errors)===false){
+			echo output_errors($errors);
+		}
+?>
+
 	<form action="" method="post">
 	  <div class="col-md-5 col-xs-5">   
 		<input type="text" name="username" id="inputfName" class="form-control" placeholder="*username" required>	
@@ -54,4 +77,6 @@ print_r($errors);
 	  </div>
 	</form>
  </div>
-<?php include 'includes/overall/footer.php';?>
+<?php 
+}
+include 'includes/overall/footer.php';?>
