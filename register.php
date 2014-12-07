@@ -18,6 +18,9 @@ if (empty($_POST) ===false){
 		if (preg_match("/\\s/", $_POST['username']) == true){
 			$errors[] = "username must not conatin any space.";
 		}
+		if (strlen($_POST['password'])<6){
+			$errors[]='password must at least 6 characters';
+		}
 		if ($_POST['password'] !== $_POST['password_again']) {
 			$errors[] ='Your passwords do not match';
 		}
