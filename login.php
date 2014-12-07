@@ -13,9 +13,8 @@ if(empty($_POST) === false){
 		$errors[] ='Have you active your account?';	
 	}else{
 		if (strlen($password) > 32){
-			$errors[]= 'Username is too long';
+			$errors[]= 'Password is too long';
 		}
-		
 		$login = login($username, $password);
 		if ($login ===false){
 			$errors[]='That username and password does not match!!';
@@ -25,11 +24,17 @@ if(empty($_POST) === false){
 			exit();
 		}
 	}
-	
-	print_r($errors);
+} else{
+	$errors[]='no errors received.'; 
 }
 include 'includes/overall/header.php';
-
-include 'includes/overall/footer.php';
-
+if (empty($errors)===false){
 ?>
+	<p>Redirect home page to <a href="index.php"> log in?</a> | <a href="register.php">Join Libro today?</a></p>
+	<h2> We tried to log you in, but...</h2>
+<?php
+	echo output_errors($errors);
+}
+	include 'includes/overall/footer.php';
+?>
+

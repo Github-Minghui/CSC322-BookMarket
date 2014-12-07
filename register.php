@@ -33,7 +33,7 @@ if (empty($_POST) ===false){
 <div class="row">
 	<div class= "panel panel-info col-md-12">
 	  <div class="panel-heading">
-	   <h3>Register</h3>
+	   <h3>Join Libros today!</h3>
 	  </div>
 	</div>
 	<br>	

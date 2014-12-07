@@ -4,7 +4,7 @@
   </div>
   <form action="login.php" method="post">
 	  <li class="list-group-item">
-		username/email:<br>
+		Username (or Email):<br>
 		<input type="text" name ="username" class="form-control"  placeholder="username/email">
 	  </li>
 	  <li class="list-group-item">
