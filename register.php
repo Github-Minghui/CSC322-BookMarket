@@ -5,7 +5,7 @@ include 'includes/overall/header.php';
 if (empty($_POST) ===false){
 	$required_fields = array('username', 'password','password_again','first_name','email');
 	foreach($_POST as $key => $value){
-		if (empty($value) && in_array($value, $_required_fields) === true){
+		if (empty($value) && in_array($key, $_required_fields) === true){
 			$errors[] = 'Fields marked with an asterisk are required';
 			break 1;
 		}
@@ -29,20 +29,20 @@ if (empty($_POST) ===false){
 		}
 	}
 }
+
 ?>
 <div class="row">
-	<div class= "panel panel-info col-md-12">
+	<div class= "panel panel-info">
 	  <div class="panel-heading">
 	   <h3>Join Libros today!</h3>
 	  </div>
-	</div>
-	<br>	
-	
+
+	  
 <?php 
-	if (isset($_GET['success']) && empty($_GET['success'])){
-		echo 'You\'ve been registered successfully!';
-	} else{
-		if (empty($_POST) ===false && empty($errors) === false){
+if (isset($_GET['success']) && empty($_GET['success'])){
+	echo 'You\'ve been registered successfully!';
+} else{
+		if (empty($_POST) ===false && empty($errors) === true){
 			$register_data = array(
 				'username' 		=> $_POST['username'],
 				'password' 		=> $_POST['password'],
@@ -58,8 +58,9 @@ if (empty($_POST) ===false){
 		}
 ?>
 
-	<form action="" method="post">
-	  <div class="col-md-5 col-xs-5">   
+	<form action="" method="post" >
+	  <div class="col-md-5 col-xs-5">  
+<br>	  
 		<input type="text" name="username" id="inputfName" class="form-control" placeholder="*username" required>	
 		<input type="password" name ="password" id="inputPassword" class="form-control" placeholder="*password" required>	
 		<input type="password" name ="password_again" id="inputPassword" class="form-control" placeholder="*password again" required>	
@@ -76,7 +77,9 @@ if (empty($_POST) ===false){
 		<?php #include 'includes/widgets/securityQ.php';?>
 	  </div>
 	</form>
+	</div>
  </div>
 <?php 
 }
-include 'includes/overall/footer.php';?>
+include 'includes/overall/footer.php';
+?>
