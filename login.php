@@ -1,6 +1,5 @@
 <?php 
 include 'core/init.php';
-include 'includes/overall/header.php';
 
 if(empty($_POST) === false){
 	$username =$_POST['username'];
@@ -13,6 +12,10 @@ if(empty($_POST) === false){
 	} else if (user_active($username) === false) {
 		$errors[] ='Have you active your account?';	
 	}else{
+		if (strlen($password) > 32){
+			$errors[]= 'Username is too long';
+		}
+		
 		$login = login($username, $password);
 		if ($login ===false){
 			$errors[]='That username and password does not match!!';
@@ -24,8 +27,8 @@ if(empty($_POST) === false){
 	}
 	
 	print_r($errors);
-
 }
+include 'includes/overall/header.php';
 
 include 'includes/overall/footer.php';
 

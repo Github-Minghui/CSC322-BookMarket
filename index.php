@@ -11,8 +11,10 @@ include 'includes/overall/header.php';
       </div>
     </div>
   </div>
+  
   <div class="col-md-8 col-xs-8">   
     <?php include 'includes/widgets/recommendation.php';?>
+    <?php include 'includes/widgets/topRating.php';?> 
   </div>  <!-- ./.col-md-8 -->
 
 
@@ -20,8 +22,5 @@ include 'includes/overall/header.php';
     <?php include 'includes/aside.php';?>
   </div><!-- .col-sm-4 -->
 
-  <div class="col-md-8 col-xs-8">   
-    <?php include 'includes/widgets/topRating.php';?>    
-  </div>
 </div>
 <?php include 'includes/overall/footer.php';?>
