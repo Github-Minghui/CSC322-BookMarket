@@ -7,7 +7,7 @@ include 'includes/overall/header.php';
   <div class="col-md-9 col-sm-9">
     <div class= "panel panel-primary">
       <div class="panel-heading">
-       <h3> Ready for a new book? Buy it today!</h3>
+       <h3> Ready for a new book? Buy it today! (<-TODO)</h3>
       </div>
 	  <li class="list-group-item">
 		Book1
@@ -20,11 +20,9 @@ include 'includes/overall/header.php';
 	  </li>
     </div>
 	<?php include 'includes/widgets/topRating.php';?>
-	<?php include 'includes/widgets/recommendation.php';?>
-
-  </div>  
-  <div class="col-md-3 col-sm-3 col-xs-12">
-	<?php include 'includes/aside.php';?>
-  </div><!-- .col-sm-4 -->
+  </div> 
+  <div class="col-md-3 col-xs-12">
+  	<?php include 'includes/widgets/side_recommendation.php';?>
+  </div> 
 
 <?php include 'includes/overall/footer.php';?>

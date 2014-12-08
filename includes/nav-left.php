@@ -1,7 +1,7 @@
-<form class="navbar-form navbar-left" role="search">
+<form class="navbar-form navbar-left col-md-12" role="search">
 <div class="form-group">        
-      <input type="text" class="form-control" placeholder="Search a Book">
+      <input type="text" class="form-control" placeholder="TODO: Search a Book" disabled>
 </div>
-      <button type="submit" class="btn btn-default" > Search</button>
+      <button type="submit" class="btn btn-default" disabled> Search</button>
 
 </form><!-- /.navbar-left-->

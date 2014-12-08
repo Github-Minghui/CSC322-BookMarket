@@ -8,7 +8,7 @@ include 'includes/overall/header.php';
   <div class="col-md-12 col-xs-12 ">
     <div class= "panel panel-default">
       <div class="panel-heading">
-       <h2><strong><em>$book_data['title']</em></strong></h2>
+       <h2><strong><em>$book_data['title']</em></strong>(<-TODO)</h2>
 		 <small>by $book_data['author']</small>
       </div>
 	  <li class="list-group-item">

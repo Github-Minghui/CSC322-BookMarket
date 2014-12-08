@@ -4,6 +4,6 @@
 </div>
 <li class="list-group-item ">
 	<span>|<a href ="logout.php"> logout </a></span><br>
-	<span>|<a href="setting.php"><!-- TODO: make a page for this. -->  setting</a></span><br> 
 	<span>|<a href="changepassword.php"> change password</a></span><br>
+	<span>|<a href="setting.php"> setting (<-TODO)</a></span><br> 
 </li>

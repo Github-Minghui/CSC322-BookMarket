@@ -5,7 +5,7 @@ include 'includes/overall/header.php';
 if (empty($_POST) ===false){
 	$required_fields = array('username', 'password','password_again','first_name','email');
 	foreach($_POST as $key => $value){
-		if (empty($value) && in_array($key, $_required_fields) === true){
+		if (empty($value) && in_array($key, $required_fields) === true){
 			$errors[] = 'Fields marked with an asterisk are required';
 			break 1;
 		}
