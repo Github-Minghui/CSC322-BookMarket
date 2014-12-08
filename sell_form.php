@@ -9,9 +9,9 @@ include 'includes/overall/header.php';
       <div class="panel-heading">
        <h3>Have an extra copy of book? Sell it today!</h3>
       </div>
+	  <form class="form-horizontal" action="" method="post">
 	  <li class="list-group-item">
-		Book Title:<br>
-		<input type="text" name ="username" class="form-control"  placeholder="Title">
+		Book Title:<input type="password" name="password" class="form-control"  placeholder="BookTitle">
 	  </li>
 	  <li class="list-group-item">
 		Author name:<input type="password" name="password" class="form-control"  placeholder="Author name">
@@ -23,12 +23,15 @@ include 'includes/overall/header.php';
 		Condition:<input type="password" name="password" class="form-control"  placeholder="Condition">
 	  </li>
 	  <li class="list-group-item">
+		<div class="form-group">
+		<label for="exampleInputFile">Book Cover</label>
+		<input type="file" id="exampleInputFile">
+	  </li>
+	  <li class="list-group-item">
 		<button type="submit" value="Log in" class="btn btn-default" > List for sell</button>
 		<!-- <button type="submit" class="btn btn-default"> Join Libro!</button> -->
 	  </li>
-	  <li class="list-group-item">
-
-	  </li>
+		</form>
     </div>
   </div>
   

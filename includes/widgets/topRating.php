@@ -3,10 +3,11 @@
         <span> Top 6 Rating</span>
       </div>
 	  <li class="list-group-item">
-            <table class="table" padding:"8px">
+		<div class="table-responsive">
+            <table class="table">
               <thead>  
                 <tr>
-                    <th># </th>
+                    <th>#</th>
                     <th>Title</th>
                     <th>Author</th>
                     <th>Description</th>
@@ -21,7 +22,23 @@
                   <td> blah blah </td>
                   <td> 50</td>
                 </tr>
+                <tr>
+                  <td> 2</td>
+                  <td width="100px"><span> <a href="bookpage.php">  Game of Throne </a></span></td>
+                  <td> Martin </td>
+                  <td> blah blah </td>
+                  <td> 50</td>
+                </tr>
+                <tr>
+                  <td> 3</td>
+                  <td width="100px"><span> <a href="bookpage.php">  Game of Throne </a></span></td>
+                  <td> Martin </td>
+                  <td> blah blah </td>
+                  <td> 50</td>
+                </tr>
+				
               </tbody>
-            </table>	    
+            </table>	   
+		</div>
       </li>
     </div>    <!-- End of top 6 -->

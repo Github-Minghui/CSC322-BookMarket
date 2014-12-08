@@ -7,7 +7,6 @@ include 'includes/overall/header.php';
       <div class="panel-heading">
        <h3> Log in Libro</h3>
       </div>
-	
 	  <form class="form-signin" action="login.php" method="post"> <!-- form-->
 	  <li class="list-group-item">
 		Username(or Email):
