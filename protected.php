@@ -8,7 +8,7 @@ include 'includes/overall/header.php';
        <h3> Sorry, you need to be logged in to do that!</h3>
       </div>
 	  <li class="list-group-item">
-		<p> Please <a href="index.php">log in</a> or <a href="register.php">register</a>.</p>
+		<p> Please <a href="login_form.php">log in</a> or <a href="register.php">register</a>.</p>
 	  </li>
     </div>
   </div>

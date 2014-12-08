@@ -1,4 +1,4 @@
-<footer class="bs-docs-footer">
+<footer class="footer">
 <!-- Quick navigation in the footer, not neccessary.
 	<div class="container">
 		<nav class="container navbar-fixed-bottom">

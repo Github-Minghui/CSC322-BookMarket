@@ -1,8 +1,9 @@
-<form class="navbar-form  navbar-right" role="navigation">
-	
+<form class="navbar-form  navbar-right" role="navigation">	
 	<?php 
 		if (logged_in() === true){
-			include 'includes/widgets/backup/loggedin.php';	
-		}else{		}
+			include 'includes/widgets/nav_loggedin.php';	
+		}else{
+			include 'includes/widgets/nav_log.php';
+		}
 	?>
 </form> <!-- /.navbar-right-->
