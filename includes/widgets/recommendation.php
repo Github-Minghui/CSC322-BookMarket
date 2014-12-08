@@ -1,37 +1,37 @@
     <div class="panel panel-warning">    <!-- Start of Recommandations -->
       <div class="panel-heading">
-        <h4>Recommendations</h4>
+        <span>Recommendations</span>
       </div>
-      <div class="panel-body">
+	  <li class="list-group-item">
         <div class="row">
-          <div class="col-xs-3"> <!--this is the size of the box of the image--> 
-              <a href="#" class="thumbnail">
-                  <img src="image/this-image.jpg"  height = "150px" width = "150px"> <!--get image and size-->
-                  <h4>Label</h4><!--this is meant to type the author's name--> 
-                  <span class="text-muted">Something else</span> <!-- this is for genre etc.--> 
-              </a>
-          </div>
-          <div class="col-xs-3"> <!--this is the size of the box of the image--> 
-              <a href="#" class="thumbnail">
-                  <img src="image/this-image.jpg"  height = "150px" width = "150px"> <!--get image and size-->
-                  <h4>Label</h4><!--this is meant to type the author's name--> 
-                  <span class="text-muted">Something else</span> <!-- this is for genre etc.--> 
-              </a>
-          </div>
-          <div class="col-xs-3"> <!--this is the size of the box of the image--> 
-              <a href="#" class="thumbnail">
-                  <img src="image/this-image.jpg"  height = "150px" width = "150px"> <!--get image and size-->
-                  <h4>Label</h4><!--this is meant to type the author's name--> 
-                  <span class="text-muted">Something else</span> <!-- this is for genre etc.--> 
-              </a>
-          </div>
-          <div class="col-xs-3"> <!--this is the size of the box of the image--> 
-              <a href="#" class="thumbnail">
-                  <img src="image/this-image.jpg"  height = "150px" width = "150px"> <!--get image and size-->
-                  <h4>Label</h4><!--this is meant to type the author's name--> 
-                  <span class="text-muted">Something else</span> <!-- this is for genre etc.--> 
-              </a>
-          </div>
+			<div class="col-md-3"> <!--this is the size of the box of the image--> 
+				<a href="#" class="thumbnail">
+					<img src="image/rec_book1.png"  height = "150px" width = "150px"> <!--get image and size-->
+						<span>J.K. Rowling</span><br><!--this is meant to type the author's name--> 
+					<span class="text-muted">Fantasy Fiction</span> <!-- this is for genre etc.--> 
+				</a>
+			</div>
+			<div class="col-md-3"> <!--this is the size of the box of the image--> 
+				<a href="#" class="thumbnail">
+					<img src="image/rec_book2.png"  height = "150px" width = "150px"> <!--get image and size-->
+						<span>J.K. Rowling</span><br><!--this is meant to type the author's name--> 
+					<span class="text-muted">Fantasy Fiction</span> <!-- this is for genre etc.--> 
+				</a>
+			</div>
+			<div class="col-md-3"> <!--this is the size of the box of the image--> 
+				<a href="#" class="thumbnail">
+					<img src="image/rec_book3.png"  height = "150px" width = "150px"> <!--get image and size-->
+						<span>J.K. Rowling</span><br><!--this is meant to type the author's name--> 
+					<span class="text-muted">Fantasy Fiction</span> <!-- this is for genre etc.--> 
+				</a>
+			</div>
+			<div class="col-md-3"> <!--this is the size of the box of the image--> 
+				<a href="#" class="thumbnail">
+					<img src="image/rec_book4.png"  height = "150px" width = "150px"> <!--get image and size-->
+						<span>J.K. Rowling</span><br><!--this is meant to type the author's name--> 
+					<span class="text-muted">Fantasy Fiction</span> <!-- this is for genre etc.--> 
+				</a>
+			</div>
         </div>                       
-      </div>
+      </li>
     </div>    <!-- End of Recommandations -->

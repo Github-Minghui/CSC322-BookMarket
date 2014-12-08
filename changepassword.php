@@ -25,7 +25,7 @@ include 'includes/overall/header.php';
 ?>
   <!-- Content of page -->
   <div class="col-md-8 col-xs-8">
-    <div class= "panel panel-default">
+    <div class= "panel panel-primary">
       <div class="panel-heading">
        <h3>Change Password</h3>
       </div>
@@ -43,7 +43,7 @@ include 'includes/overall/header.php';
 				<input type="text" name ="password_again" class="form-control"  placeholder="New password again">
 			  </li>
 			  <li class="list-group-item">
-				<button type="submit" value="Change password" class="btn btn-default" >Change password </button>
+				<button type="submit" value="Change password" class="btn btn-primary" >Change password </button>
 			  </li>
 		  </form>
     </div>	

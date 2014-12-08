@@ -1,4 +1,4 @@
-<div class="panel panel-default">    <!-- Start of Recommandations -->
+<div class="panel panel-success">    <!-- Start of Recommandations -->
 	<?php 
 		if (logged_in() === true){
 			include 'includes/widgets/loggedin.php';	
