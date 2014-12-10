@@ -32,7 +32,7 @@ if (empty($_POST) ===false){
 
 ?>
 <div class="row">
-	<div class= "panel panel-info">
+	<div class= "panel panel-primary">
 	  <div class="panel-heading">
 	   <h3>Join Libros today!</h3>
 	  </div>
@@ -61,21 +61,36 @@ if (isset($_GET['success']) && empty($_GET['success'])){
 	<form action="" method="post" >
 	  <div class="col-md-5 col-xs-5">  
 <br>	  
-		<input type="text" name="username" id="inputfName" class="form-control" placeholder="*username" required>	
-		<input type="password" name ="password" id="inputPassword" class="form-control" placeholder="*password" required>	
-		<input type="password" name ="password_again" id="inputPassword" class="form-control" placeholder="*password again" required>	
-		<input type="text" name ="first_name" id="inputfName" class="form-control" placeholder="*First Name" required>
-		<input type="text" name ="last_name" id="inputlName" class="form-control" placeholder="*Last Name" required>
-		<input type="email" name ="email" id="inputEmail" class="form-control" placeholder="*Email address" required autofocus>
-		<br>	
+		<li class="list-group-item">
+			<input type="text" name="username" id="inputfName" class="form-control" placeholder="*username" required>	
+		</li>
+		<li class="list-group-item">
+			<input type="password" name ="password" id="inputPassword" class="form-control" placeholder="*password [Please enter at least 6 characters for your password]" required>	
+		</li>
+		<li class="list-group-item">
+			<input type="password" name ="password_again" id="inputPassword" class="form-control" placeholder="*password again" required>	
+		</li>
+		<li class="list-group-item">
+			<input type="text" name ="first_name" id="inputfName" class="form-control" placeholder="*First Name" required>
+		</li>
+		<li class="list-group-item">
+			<input type="text" name ="last_name" id="inputlName" class="form-control" placeholder="*Last Name" required>
+		</li>
+		<li class="list-group-item">
+			<input type="email" name ="email" id="inputEmail" class="form-control" placeholder="*Email address" required autofocus>
+		</li>
 		<!--Button for Register a new account -->
-		<button type="submit" value="register" class="btn btn-lg btn-info"  >
-			Register as a New Member
-		</button>
 	  </div>
 	  <div class="col-md-7 col-xs-7">   
 		<?php #include 'includes/widgets/securityQ.php';?>
 	  </div>
+	  <div class="col-md-12 col-xs-12">  		
+		<li class="list-group-item ">
+			<button type="submit" value="register" class="btn btn-lg btn-default "  >
+				Register as a New Member
+			</button>
+		</li>	
+	  </div>	  
 	</form>
 	</div>
  </div>

@@ -13,20 +13,8 @@ if (empty($_POST) ===false){
 	}
 
 	if (empty($errors) === true){
-		if (user_exists($_POST['username'])===true){
-			$errors[]='Sorry, the username \'' . $_POST['username'] . '\' is already taken.';
-		}
-		if (preg_match("/\\s/", $_POST['username']) == true){
-			$errors[] = "username must not conatin any space.";
-		}
-		if (strlen($_POST['password'])<6){
-			$errors[]='password must at least 6 characters';
-		}
-		if ($_POST['password'] !== $_POST['password_again']) {
-			$errors[] ='Your passwords do not match';
-		}
-		if (email_exists($_POST['email'])===true){
-			$errors[]='Sorry, the email \'' . $_POST['email'] . '\' is already in use.';
+		if (book_exists($_POST['title'])===true){
+			$errors[]='Sorry, the title \'' . $_POST['title'] . '\' is already exist.';
 		}
 	}
 }

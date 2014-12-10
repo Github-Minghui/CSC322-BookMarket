@@ -30,11 +30,23 @@ if(empty($_POST) === false){
 include 'includes/overall/header.php';
 if (empty($errors)===false){
 ?>
-	<p>Redirect home page to <a href="index.php"> log in?</a> | <a href="register.php">Join Libro today?</a></p>
-	<h2> We tried to log you in, but...</h2>
+	<div class="col-md-9 col-sm-9 col-xs-12"> 
+	    <div class="panel panel-default ">    <!-- Start of Recommandations -->
+	      <div class="panel-heading">
+			<h3>We tried to log you in, but...</h3>
+		  </div>
+		  <li class="list-group-item">	  
+			<?php
+				echo output_errors($errors);
+			}
+			?>
+		  </li>
+		 </div>
+	</div>
+	<div class="col-md-3 col-sm-3 col-xs-12 ">
+	  <?php include 'includes/aside.php';?>
+	</div><!-- .col-sm-4 -->
 <?php
-	echo output_errors($errors);
-}
 	include 'includes/overall/footer.php';
 ?>
 
