@@ -8,15 +8,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href=" ">Libros</a>
+      <a class="navbar-brand" href="index.php">Libros</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <div class="row">
-      <?php include 'includes/nav-menu.php';?>
+		<?php include 'includes/nav-menu.php';?>
   		<?php include 'includes/nav-left.php';?>
   		<?php include 'includes/nav-right.php';?>
-	  </div><!-- /.navbar-collapse -->
+	</div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 

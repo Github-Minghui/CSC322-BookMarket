@@ -5,3 +5,4 @@
   <body>
   <?php include 'includes/header.php';?>
 	<div class="container" type="body">
+	<div class= "row">

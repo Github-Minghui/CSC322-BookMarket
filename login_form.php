@@ -1,8 +1,13 @@
-
-  <div class="panel-heading">
-	<h4>Login to Libro.</h4>
-  </div>
-  <form action="login.php" method="post">
+<?php 
+include 'core/init.php';
+include 'includes/overall/header.php';
+?>
+  <div class="col-md-12 col-sm-12">
+    <div class= "panel panel-primary">
+      <div class="panel-heading">
+       <h3> Log in Libro</h3>
+      </div>
+	  <form class="form-signin" action="login.php" method="post"> <!-- form-->
 	  <li class="list-group-item">
 		Username(or Email):
 		<input type="text" name ="username" class="form-control"  placeholder="username/email">
@@ -16,8 +21,8 @@
 	  </li>
 	  <li class="list-group-item">
 		|<a href="register.php"> Join Library today!</a><br>
-		|<a href= "forgotpassword.php"> Forgot password?(<-TODO)</a><br>
-		|<a href= "help.php"> Need help?(<-TODO)</a><br>
+		| <a href= "changepassword.php"> Change Password</a><br>
 	  </li>
-	  
-	</form>
+	</div>
+  </div>	  
+<?php include 'includes/overall/footer.php';?>

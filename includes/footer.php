@@ -1,4 +1,4 @@
-<footer>
+<footer class="footer">
 <!-- Quick navigation in the footer, not neccessary.
 	<div class="container">
 		<nav class="container navbar-fixed-bottom">
@@ -15,6 +15,6 @@
 	</div>
 -->
 	<div class="container">
-		&copy; All rights reserved.
+		<p class="text-muted">&copy; All rights reserved. </p>
 	</div>
 </footer>
