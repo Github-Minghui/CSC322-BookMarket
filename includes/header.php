@@ -11,13 +11,8 @@
       <a class="navbar-brand" href="index.php">Libros</a>
     </div>
 
-<<<<<<< HEAD
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		<?php include 'includes/nav-menu.php';?>
-=======
     <div class="collapse navbar-collapse" id="navbar-collapse-1">
-		  <?php include 'includes/nav-menu.php';?>
->>>>>>> 8fad85e3205d92408f2d76969fdd13f31e95dd5a
+		<?php include 'includes/nav-menu.php';?>
   		<?php include 'includes/nav-left.php';?>
   		<?php include 'includes/nav-right.php';?>
 	</div><!-- /.navbar-collapse -->
