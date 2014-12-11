@@ -35,6 +35,10 @@ if (empty($_POST) ===false){
 			<input type="text" name="author" class="form-control"  placeholder="Author name">
 		  </li>  
 		  <li class="list-group-item">
+			<label>Genre:</label>
+			<input type="text" name="genre" class="form-control"  placeholder="Genre">
+		  </li>  
+		  <li class="list-group-item">
 			<label>Price:</label>
 			<input type="text" name="price" class="form-control"  placeholder="Price (unit: $)">
 		  </li>
@@ -48,7 +52,6 @@ if (empty($_POST) ===false){
 		  </li>
 		  <li class="list-group-item">
 			<button type="submit" value="Log in" class="btn btn-default" > List for sell</button>
-			<!-- <button type="submit" class="btn btn-default"> Join Libro!</button> -->
 		  </li>
 	  </form>
     </div>

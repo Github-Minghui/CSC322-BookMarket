@@ -1,4 +1,4 @@
-    <div class="panel panel-warning">    <!-- Start of Recommandations -->
+    <div class="panel panel-success">    <!-- Start of Recommandations -->
       <div class="panel-heading">
         <span>Recommendations</span>
       </div>
