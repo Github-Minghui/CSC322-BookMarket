@@ -1,6 +1,6 @@
 CSC322-BookMarket
 =================
-In order to have this web-based application to work, you have to download <a href="https://www.apachefriends.org/index.html"xammp</a>.
+In order to have this web-based application to work, you have to download <a href="https://www.apachefriends.org/index.html">xammp</a>.
 
 After start both Apache and MySQL in XAMPP Control Panel,You need to go to browser, type "localhost/phpmyadmain" into address.
 
