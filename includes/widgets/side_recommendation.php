@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-    <div class="panel panel-warning">    <!-- Start of Recommandations -->
-=======
     <div class="panel panel-success">    <!-- Start of Recommandations -->
->>>>>>> 8fad85e3205d92408f2d76969fdd13f31e95dd5a
       <div class="panel-heading">
         <span>Recommendations</span>
       </div>

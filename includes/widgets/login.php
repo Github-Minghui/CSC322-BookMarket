@@ -17,11 +17,7 @@
 	  <li class="list-group-item">
 		|<a href="register.php"> Join Library today!</a><br>
 		|<a href= "forgotpassword.php"> Forgot password?(<-TODO)</a><br>
-<<<<<<< HEAD
-		|<a href= "help.php"> Need help?(<-TODO)</a><br>
-=======
 		|<a href= "help.php"> Need help?</a><br>
->>>>>>> 8fad85e3205d92408f2d76969fdd13f31e95dd5a
 	  </li>
 	  
 	</form>
