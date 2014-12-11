@@ -3,15 +3,20 @@ CSC322-BookMarket
 In order to have this web-based application to work, you have to download <a href="https://www.apachefriends.org/index.html">xammp</a>.
 
 After start both Apache and MySQL in XAMPP Control Panel,You need to go to browser, type "localhost/phpmyadmain" into address.
+<br>
 
 Create a new user with following info:
+<br>
 	name: csc322
+<br>
 	password: 123
+<br>
 	Check all of the following:
-		Create database with same name and grant all privileges.
-		Grant all privileges on wildcard name (username\_%).
-		Global privileges: Check All 
-
+	<ul>
+		<li>Create database with same name and grant all privileges.</li>
+		<li>Grant all privileges on wildcard name (username\_%).</li>
+		<li>Global privileges: Check All </li>
+	</ul>
 Then, create following tables on database: csc322,
 
 		create table users(
