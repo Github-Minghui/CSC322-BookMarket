@@ -32,7 +32,11 @@ if (empty($_POST) ===false){
 
 ?>
 <div class="row">
+<<<<<<< HEAD
 	<div class= "panel panel-info">
+=======
+	<div class= "panel panel-primary">
+>>>>>>> 8fad85e3205d92408f2d76969fdd13f31e95dd5a
 	  <div class="panel-heading">
 	   <h3>Join Libros today!</h3>
 	  </div>
@@ -61,6 +65,7 @@ if (isset($_GET['success']) && empty($_GET['success'])){
 	<form action="" method="post" >
 	  <div class="col-md-5 col-xs-5">  
 <br>	  
+<<<<<<< HEAD
 		<input type="text" name="username" id="inputfName" class="form-control" placeholder="*username" required>	
 		<input type="password" name ="password" id="inputPassword" class="form-control" placeholder="*password" required>	
 		<input type="password" name ="password_again" id="inputPassword" class="form-control" placeholder="*password again" required>	
@@ -72,10 +77,41 @@ if (isset($_GET['success']) && empty($_GET['success'])){
 		<button type="submit" value="register" class="btn btn-lg btn-info"  >
 			Register as a New Member
 		</button>
+=======
+		<li class="list-group-item">
+			<input type="text" name="username" id="inputfName" class="form-control" placeholder="*username" required>	
+		</li>
+		<li class="list-group-item">
+			<input type="password" name ="password" id="inputPassword" class="form-control" placeholder="*password [Please enter at least 6 characters for your password]" required>	
+		</li>
+		<li class="list-group-item">
+			<input type="password" name ="password_again" id="inputPassword" class="form-control" placeholder="*password again" required>	
+		</li>
+		<li class="list-group-item">
+			<input type="text" name ="first_name" id="inputfName" class="form-control" placeholder="*First Name" required>
+		</li>
+		<li class="list-group-item">
+			<input type="text" name ="last_name" id="inputlName" class="form-control" placeholder="*Last Name" required>
+		</li>
+		<li class="list-group-item">
+			<input type="email" name ="email" id="inputEmail" class="form-control" placeholder="*Email address" required autofocus>
+		</li>
+		<!--Button for Register a new account -->
+>>>>>>> 8fad85e3205d92408f2d76969fdd13f31e95dd5a
 	  </div>
 	  <div class="col-md-7 col-xs-7">   
 		<?php #include 'includes/widgets/securityQ.php';?>
 	  </div>
+<<<<<<< HEAD
+=======
+	  <div class="col-md-12 col-xs-12">  		
+		<li class="list-group-item ">
+			<button type="submit" value="register" class="btn btn-lg btn-default "  >
+				Register as a New Member
+			</button>
+		</li>	
+	  </div>	  
+>>>>>>> 8fad85e3205d92408f2d76969fdd13f31e95dd5a
 	</form>
 	</div>
  </div>

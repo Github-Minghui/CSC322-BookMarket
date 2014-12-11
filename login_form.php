@@ -2,7 +2,11 @@
 include 'core/init.php';
 include 'includes/overall/header.php';
 ?>
+<<<<<<< HEAD
   <div class="col-md-12 col-sm-12">
+=======
+  <div class="col-md-6 col-xs-12">
+>>>>>>> 8fad85e3205d92408f2d76969fdd13f31e95dd5a
     <div class= "panel panel-primary">
       <div class="panel-heading">
        <h3> Log in Libro</h3>
@@ -21,7 +25,11 @@ include 'includes/overall/header.php';
 	  </li>
 	  <li class="list-group-item">
 		|<a href="register.php"> Join Library today!</a><br>
+<<<<<<< HEAD
 		| <a href= "changepassword.php"> Change Password</a><br>
+=======
+		|<a href= "changepassword.php"> Change Password</a><br>
+>>>>>>> 8fad85e3205d92408f2d76969fdd13f31e95dd5a
 	  </li>
 	</div>
   </div>	  
