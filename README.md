@@ -11,6 +11,7 @@ Create a new user with following info:
 <br>
 	password: 123
 <br>
+
 	Check all of the following:
 	<ul>
 		<li>Create database with same name and grant all privileges.</li>
