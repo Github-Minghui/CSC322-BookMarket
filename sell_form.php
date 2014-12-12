@@ -3,7 +3,7 @@ include 'core/init.php';
 include 'includes/overall/header.php';
 protect_page();
 
-if (empty($_POST) ===false){
+if (empty($_POST) === false){
 	$required_fields = array('title', 'author','price','condition');
 	foreach($_POST as $key => $value){
 		if (empty($value) && in_array($key, $required_fields) === true){
@@ -12,11 +12,31 @@ if (empty($_POST) ===false){
 		}
 	}
 
-	if (empty($errors) === true){
-		if (book_exists($_POST['title'])===true){
-			$errors[]='Sorry, the title \'' . $_POST['title'] . '\' is already exist.';
-		}
-	}
+	$booktitle = $_POST['title'];
+	$bookauthor = $_POST['author'];
+	$bookgenre = $_POST['genre'];
+	$bookprice = $_POST['price'];
+	$bookcondition = $_POST['condition'];
+	$book_cover = $_POST['book_cover'];
+	
+	$username = "csc322";
+	$password = "123";
+	$hostname = "localhost";
+	$db = mysql_connect($hostname,$username,$password) or die("There was an error.");
+
+	$query = "INSERT INTO csc322.books (`book_id`, `title`, `author`, `genre`, `price`, `book_condition`, `book_cover`, `rating`, `owner`) VALUES (NULL,'".$booktitle."' ,'".$bookauthor."', '".$bookgenre."', '".$bookprice."', '".$bookcondition."', NULL, NULL, '2')";
+
+	//mysql_query("use csc322");
+	$result = mysql_query($query);
+	
+	if($result){echo "everything Went Well";}
+	else{echo mysql_error();};
+
+	//if (empty($errors) === true){
+	//	if (book_exists($_POST['title'])===true){
+	//		$errors[]='Sorry, the title \'' . $_POST['title'] . '\' is already exist.';
+	//	}
+	//}
 }
 ?>
   <!-- Content of page -->
@@ -25,7 +45,7 @@ if (empty($_POST) ===false){
       <div class="panel-heading">
        <h3>Have an extra copy of book? Sell it today! (<-TODO)</h3>
       </div>
-	  <form class="form-horizontal" action="" method="post">
+	  <form class="form-horizontal" action="" method="post" action="Book_Reg.php">
 		  <li class="list-group-item">
 			<label>Book Title:</label>
 			<input type="text" name="title" class="form-control"  placeholder="BookTitle">
