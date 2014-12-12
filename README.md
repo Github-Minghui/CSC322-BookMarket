@@ -39,11 +39,12 @@ Then, create following tables on database: csc322,
 			book_condition varchar(32) not null,
 			book_cover varchar(1024),
 			rating int(11)
+			owner int(11)
 			--adding references between two tables
-			set foreign_key_checks=0;
+			--set foreign_key_checks=0;(IGNORE)
 			ALTER TABLE books ADD CONSTRAINT
-					FOREIGN KEY (users_id)
-					REFERENCES users(users_id);
+					FOREIGN KEY (owner)
+					REFERENCES users(user_id);
 		);
 
 
