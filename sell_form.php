@@ -17,14 +17,27 @@ if (empty($_POST) === false){
 	$bookgenre = $_POST['genre'];
 	$bookprice = $_POST['price'];
 	$bookcondition = $_POST['condition'];
-	$book_cover = $_POST['book_cover'];
-	
+
+	 
+	$target = "image/"; 
+	$target = $target . basename( $_FILES['book_cover']['name']) ; 
+	$ok=1; 
+	if(move_uploaded_file($_FILES['book_cover']['tmp_name'], $target)) 
+	{
+		echo "The file ". basename( $_FILES['book_cover']['name']). " has been uploaded";
+	} 
+	else {
+		echo "Sorry, there was a problem uploading your file.";
+	}
+	 
+	$book_cover = $target;
+	echo($target);
 	$username = "csc322";
 	$password = "123";
 	$hostname = "localhost";
 	$db = mysql_connect($hostname,$username,$password) or die("There was an error.");
 
-	$query = "INSERT INTO csc322.books (`book_id`, `title`, `author`, `genre`, `price`, `book_condition`, `book_cover`, `rating`, `owner`) VALUES (NULL,'".$booktitle."' ,'".$bookauthor."', '".$bookgenre."', '".$bookprice."', '".$bookcondition."', NULL, NULL, '2')";
+	$query = "INSERT INTO csc322.books (`book_id`, `title`, `author`, `genre`, `price`, `book_condition`, `book_cover`, `rating`, `owner`) VALUES (NULL,'".$booktitle."' ,'".$bookauthor."', '".$bookgenre."', '".$bookprice."', '".$bookcondition."','".$book_cover."', NULL, '2')";
 
 	//mysql_query("use csc322");
 	$result = mysql_query($query);
@@ -45,7 +58,7 @@ if (empty($_POST) === false){
       <div class="panel-heading">
        <h3>Have an extra copy of book? Sell it today! (<-TODO)</h3>
       </div>
-	  <form class="form-horizontal" action="" method="post" action="Book_Reg.php">
+	  <form enctype="multipart/form-data" class="form-horizontal" action="" method="post" action="Book_Reg.php">
 		  <li class="list-group-item">
 			<label>Book Title:</label>
 			<input type="text" name="title" class="form-control"  placeholder="BookTitle">
