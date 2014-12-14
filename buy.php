@@ -18,7 +18,7 @@ include 'includes/overall/header.php';
 				$hostname = "localhost";
 				$db = mysql_connect($hostname,$username,$password) or die("There was an error.");
 
-				$query = "select * from csc322.books";
+				$query = "select * from csc322.books where owner != ".$_SESSION['user_id'];
 
 				$result = mysql_query($query) or die(mysql_error());
 				
@@ -31,7 +31,7 @@ include 'includes/overall/header.php';
 						<span>';
 				echo $row['title'];
 				echo '</span><br><!--this is meant to type the author\'s name--> 
-					<span class="text-muted">$ ';
+					<span class="text-muted">$';
 				echo $row['price'];				
 				echo'</span> <!-- this is for genre etc.--> 
 				</a>
