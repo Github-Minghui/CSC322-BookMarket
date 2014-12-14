@@ -3,13 +3,18 @@
 include 'core/init.php';
 protect_page();
 include 'includes/overall/header.php';
+$bookid =  $_GET['bid'];
+$query = "select * from csc322.books where book_id =".$_GET['bid'];
+$result = mysql_query($query) or die(mysql_error());
+$book = mysql_fetch_array($result);
 ?>
+  
   <!-- Content of page -->
   <div class="col-md-12 col-xs-12 ">
     <div class= "panel panel-default">
       <div class="panel-heading">
-       <h2><strong><em>$book_data['title']</em></strong>(<-TODO)</h2>
-		 <small>by $book_data['author']</small>
+       <h2><strong><em><?php echo $book['title']; ?></em></strong></h2>
+		 <small>by <?php echo $book['author']; ?></small>
       </div>
 	  <li class="list-group-item">
 	  Rating: 
@@ -35,19 +40,17 @@ include 'includes/overall/header.php';
 	  </li>
 	  <li class="list-group-item">
 		
-		Description: $book_data['description']
+		Description: <?php echo 'fix'; ?>
 	  </li>
 	  <li class="list-group-item">
-		Price: $book_data['price']
-	  </li>
-	  <li class="list-group-item">
-		Condition: $book_data['condition'][poor, good, like new, new]
-	  </li>
-	  <li class="list-group-item">
+		Price: <?php echo $book['price']; ?>
 		<p class="text-right">
-		<button action="" method="" class="btn btn-sm btn-danger" type="submit">Add <span class="glyphicon glyphicon-shopping-cart"> </span></button>
+		<button action="" method="" class="btn btn-sm btn-danger" type="submit">Add <span class="glyphicon glyphicon-shopping-cart"> </		span></button>
 		<button action="" method="" class="btn btn-sm btn-primary" type="submit">Buy it</button>	  
-		</p>
+		</p>		
+	  </li>
+	  <li class="list-group-item">
+		Condition: <?php echo $book['book_condition']; ?>
 	  </li>
 	  <li class="list-group-item">
 		Comments for $book_data['title'] from user:<br>

@@ -45,7 +45,7 @@
 				// Print out the contents of each row into a table
 				//echo "<tr><td>"; 
 				echo '<div class="col-md-3"> <!--this is the size of the box of the image--> 
-				<a href="bookpage.php" class="thumbnail">
+				<a href="bookpage.php/?bid='.$row['book_id'].'" class="thumbnail">
 					<img src="';
 				echo $row['book_cover'];
 				echo '"  height = "150px" width = "150px"> <!--get image and size-->
@@ -56,7 +56,7 @@
 				echo $row['genre'];				
 				echo'</span> <!-- this is for genre etc.--> 
 				</a>
-			</div>';
+					</div>';
 				//echo "</td><td>"; 
 				//echo $row['author'];
 				//echo "</td></tr>"; 
