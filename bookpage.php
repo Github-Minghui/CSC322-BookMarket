@@ -9,6 +9,7 @@ $book = mysql_fetch_array($result);
 if( isset($_POST['inlineRadioOptions']) )
 {
 	echo $_POST['inlineRadioOptions'];
+	$query = "UPDATE csc322.books SET rating = ".$_POST['inlineRadioOptions']." where id = ";
 }
 ?>
   
