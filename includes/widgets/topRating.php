@@ -54,7 +54,6 @@
 					echo '<td>';
 					echo $book['book_condition'];
 					echo '</td>';
-
 					}
 				?>
               </tbody>
