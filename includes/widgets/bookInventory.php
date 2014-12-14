@@ -1,15 +1,26 @@
     <div class="panel panel-warning">    <!-- Start of Recommandations -->
       <div class="panel-heading">
-        <span>Your Books</span>
+        <span>Your Books for Sell</span>
       </div>
 	  <li class="list-group-item">
         <div class="row">
 			<?php
 				#connect to database is included in header file, so do not write redundant code here.
-				$query = mysql_query("select * from books") or die(mysql_error());
-				
-				while($row = mysql_fetch_array( $query )) {
+				$username = "csc322";
+				$password = "123";
+				$hostname = "localhost";
+				$db = mysql_connect($hostname,$username,$password) or die("There was an error.");
 
+				$query = "select * from csc322.books where owner = ".$_SESSION['user_id'];
+
+				$result = mysql_query($query) or die(mysql_error());
+				
+				//echo "<table border='1'>";
+				//echo "<tr> <th>title</th> <th>author</th> </tr>";
+				// keeps getting the next row until there are no more to get
+				while($row = mysql_fetch_array( $result )) {
+				// Print out the contents of each row into a table
+				//echo "<tr><td>"; 
 				echo '<div class="col-md-3"> <!--this is the size of the box of the image--> 
 				<a href="bookpage.php/?bid='.$row['book_id'].'" class="thumbnail">
 					<img src="';

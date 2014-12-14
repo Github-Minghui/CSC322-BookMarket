@@ -80,7 +80,7 @@ if (empty($_POST) === false){
 		  </li>
 	  </form>
     </div>
-	<?php include 'includes/widgets/recommendation.php';?>                       
+	<?php include 'includes/widgets/bookInventory.php';?>                       
   </div>
   <div class="col-md-3 col-xs-12">
   	<?php include 'includes/widgets/side_recommendation.php';?>
