@@ -47,7 +47,7 @@ if( isset($_POST['inlineRadioOptions']) )
 	  </li>
 
 	  <li class="list-group-item">
-		<img src=" <?php echo '/CSC322-BookMarket/'.$book['book_cover']; ?> "  height = "150px" width = "150px">
+		<img src=" <?php echo '/CSC322-BookMarket/'.$book['book_cover']; ?> ">
 		<br>
 		Description: <?php //echo $book['description']; 
                              ?>
@@ -63,7 +63,7 @@ if( isset($_POST['inlineRadioOptions']) )
 		Condition: <?php echo $book['book_condition']; ?>
 	  </li>
 	  <li class="list-group-item">
-		Comments for $book_data['title'] from user:<br>
+		Comments for <strong><em><?php echo $book['title']; ?></em></strong> from users:<br>
 		// Loop through database, output $book_data['comment'].
 		</li>
 	  <li class="list-group-item">

@@ -18,7 +18,7 @@ include 'includes/overall/header.php';
 				$hostname = "localhost";
 				$db = mysql_connect($hostname,$username,$password) or die("There was an error.");
 
-				$query = "select * from csc322.books where owner != ".$_SESSION['user_id'];
+				$query = "select * from csc322.books";
 
 				$result = mysql_query($query) or die(mysql_error());
 				
@@ -29,10 +29,10 @@ include 'includes/overall/header.php';
 				echo $row['book_cover'];
 				echo '"  height = "150px" width = "150px"> <!--get image and size-->
 						<span>';
-				echo $row['author'];
+				echo $row['title'];
 				echo '</span><br><!--this is meant to type the author\'s name--> 
-					<span class="text-muted">';
-				echo $row['genre'];				
+					<span class="text-muted">$ ';
+				echo $row['price'];				
 				echo'</span> <!-- this is for genre etc.--> 
 				</a>
 					</div>';

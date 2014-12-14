@@ -38,8 +38,8 @@ Then, create following tables on database: csc322,
 			price real not null,
 			book_condition varchar(32) not null,
 			book_cover varchar(1024),
-			rating int(11)
-			owner int(11)
+			rating int(11),
+			owner int(11),
 			--adding references between two tables
 			--set foreign_key_checks=0;(IGNORE)
 			ALTER TABLE books ADD CONSTRAINT
@@ -49,7 +49,7 @@ Then, create following tables on database: csc322,
 
 
 CREATE table ratings (
-id int(11) NOT NULL, --set this to "auto increment"
+id int(11) primary key,  -- set this to "auto increment"
   book_id int(11) NOT NULL,
   rating int(11) NOT NULL,
   user_id int(11) NOT NULL
