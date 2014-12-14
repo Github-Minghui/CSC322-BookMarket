@@ -1,7 +1,5 @@
-<html>
 <?php 
 include 'core/init.php';
-protect_page();
 include 'includes/overall/header.php';
 $bookid =  $_GET['bid'];
 $query = "select * from csc322.books where book_id =".$_GET['bid'];
@@ -45,8 +43,9 @@ if( isset($_POST['inlineRadioOptions']) )
 	  </li>
 
 	  <li class="list-group-item">
-		
-		Description: <?php echo 'fix'; ?>
+		<img src="<?php echo $book['book_cover']; ?>"  height = "150px" width = "150px">
+		<br>
+		Description: <?php echo $book['description']; ?>
 	  </li>
 	  <li class="list-group-item">
 		Price: <?php echo $book['price']; ?>

@@ -11,6 +11,7 @@ include 'includes/overall/header.php';
       </div>
   	  <div class="list-group-item">
 	    <div class="row">
+
 			<?php
 				$username = "csc322";
 				$password = "123";
@@ -41,7 +42,6 @@ include 'includes/overall/header.php';
 
         </div>   
 	  </div>
-
       <br>
     </div>
 	  <?php include 'includes/widgets/topRating.php';?>
