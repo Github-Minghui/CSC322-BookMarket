@@ -3,6 +3,7 @@ include 'core/init.php';
 include 'includes/overall/header.php';
 protect_page();
 
+
 if (empty($_POST) === false){
 	$required_fields = array('title', 'author','price','condition');
 	foreach($_POST as $key => $value){
