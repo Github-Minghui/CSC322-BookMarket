@@ -1,6 +1,6 @@
     <div class="panel panel-warning">    <!-- Start of Recommandations -->
       <div class="panel-heading">
-        <span>Recommendations</span>
+        <span>Your Books</span>
       </div>
 	  <li class="list-group-item">
         <div class="row">
