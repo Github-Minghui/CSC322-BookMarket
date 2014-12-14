@@ -8,8 +8,11 @@ $book = mysql_fetch_array($result);
 
 if( isset($_POST['inlineRadioOptions']) )
 {
-	echo $_POST['inlineRadioOptions'];
-	$query = "UPDATE csc322.books SET rating = ".$_POST['inlineRadioOptions']." where id = ";
+	$query = "insert into csc322.ratings(book_id,rating,user_id) values(".$bookid.",".$_POST['inlineRadioOptions'].",".$book['owner'].");";
+	$result = mysql_query($query);	
+	if($result===true){}
+	else{echo mysql_error();};
+
 }
 ?>
   
