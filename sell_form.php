@@ -33,24 +33,15 @@ if (empty($_POST) === false){
 	 
 	$book_cover = $target;
 	echo($target);
-	$username = "csc322";
-	$password = "123";
-	$hostname = "localhost";
-	$db = mysql_connect($hostname,$username,$password) or die("There was an error.");
 
 	$query = "INSERT INTO csc322.books (`book_id`, `title`, `author`, `genre`, `price`, `book_condition`, `book_cover`, `rating`, `owner`) VALUES (NULL,'".$booktitle."' ,'".$bookauthor."', '".$bookgenre."', '".$bookprice."', '".$bookcondition."','".$book_cover."', NULL, '2')";
 
-	//mysql_query("use csc322");
 	$result = mysql_query($query);
 	
-	if($result){echo "everything Went Well";}
+	if($result===true){echo "everything Went Well";}
 	else{echo mysql_error();};
 
-	//if (empty($errors) === true){
-	//	if (book_exists($_POST['title'])===true){
-	//		$errors[]='Sorry, the title \'' . $_POST['title'] . '\' is already exist.';
-	//	}
-	//}
+
 }
 ?>
   <!-- Content of page -->
@@ -89,7 +80,7 @@ if (empty($_POST) === false){
 		  </li>
 	  </form>
     </div>
-	<?php include 'includes/widgets/recommendation.php';?>                       
+	<?php include 'includes/widgets/bookInventory.php';?>                       
   </div>
   <div class="col-md-3 col-xs-12">
   	<?php include 'includes/widgets/side_recommendation.php';?>

@@ -12,23 +12,22 @@ include 'includes/overall/header.php';
   	  <li class="list-group-item">
 	    <div class="row">
 <?php
-$books_table = mysql_query("select * from books");
-while ($row = mysql_fetch_array($books_table, MYSQL_NUM) )
-{
+		$query = mysql_query("select * from books");
+		while ($row = mysql_fetch_array($query) )
+		{
 ?>
 			<div class="col-md-3 col-sm-3"> <!--this is the size of the box of the image--> 
 				<a href="bookpage.php" class="thumbnail">
-					<img src="image/rec_book1.png"  height = "150px" width = "150px"> <!--get image and size-->
-						<span><?php echo $row[2];?></span><br><!--this is meant to type the author's name--> 
-					<span class="text-muted"><?php echo $row[3];?></span> <!-- this is for genre etc.--> 
+					<img src="<?php echo $row['book_cover'];?>"  height = "150px" width = "150px"> <!--get image and size-->
+						<span><?php echo $row['author'];?></span><br><!--this is meant to type the author's name--> 
+					<span class="text-muted"><?php echo $row['genre'];?></span> <!-- this is for genre etc.--> 
 				</a>
 			</div>
-			
 <?php
-}
+		}
 ?>
         </div>   
-	  </li>
+	</li>
 
       <br>
     </div>
