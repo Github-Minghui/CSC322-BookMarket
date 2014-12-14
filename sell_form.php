@@ -48,7 +48,7 @@ if (empty($_POST) === false){
   <div class="col-md-9 col-sm-9 ">
     <div class= "panel panel-primary">
       <div class="panel-heading">
-       <h3>Have an extra copy of book? Sell it today! (<-TODO)</h3>
+       <h3>Have an extra copy of book? Sell it today!</h3>
       </div>
 	  <form enctype="multipart/form-data" class="form-horizontal" action="" method="post" action="Book_Reg.php">
 		  <li class="list-group-item">
@@ -80,7 +80,7 @@ if (empty($_POST) === false){
 		  </li>
 	  </form>
     </div>
-	<?php include 'includes/widgets/bookInventory.php';?>                       
+	<?php include 'includes/widgets/recommendation.php';?>                       
   </div>
   <div class="col-md-3 col-xs-12">
   	<?php include 'includes/widgets/side_recommendation.php';?>

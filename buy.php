@@ -7,7 +7,7 @@ include 'includes/overall/header.php';
   <div class="col-md-9 col-sm-9" >
     <div class= "panel panel-primary">
       <div class="panel-heading">
-       <h3> Ready for a new book? Buy it today! (<-TODO)</h3>
+       <h3> Ready for a new book? Buy it today!</h3>
       </div>
   	  <div class="list-group-item">
 	    <div class="row">
