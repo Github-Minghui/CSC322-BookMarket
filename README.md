@@ -48,4 +48,12 @@ Then, create following tables on database: csc322,
 		);
 
 
+CREATE table ratings (
+id int(11) NOT NULL, --set this to "auto increment"
+  book_id int(11) NOT NULL,
+  rating int(11) NOT NULL,
+  user_id int(11) NOT NULL
+);
+
+
 After that, Clone this folder under /opt/lampp/htdoc folder.
