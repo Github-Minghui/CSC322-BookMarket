@@ -18,7 +18,6 @@ include 'includes/overall/header.php';
 	  </li>  
 	  <li class="list-group-item">
 		<button type="submit" value="Log in" class="btn btn-default" > Login</button>
-		<!-- <button type="submit" class="btn btn-default"> Join Libro!</button> -->
 	  </li>
 	  <li class="list-group-item">
 		|<a href="register.php"> Join Library today!</a><br>
