@@ -1,6 +1,6 @@
     <div class="panel panel-warning">    <!-- Start of Recommandations -->
       <div class="panel-heading">
-        <span>Your Books</span>
+        <span>Books For Sell</span>
       </div>
 	  <li class="list-group-item">
         <div class="row">
@@ -34,7 +34,7 @@
 				$hostname = "localhost";
 				$db = mysql_connect($hostname,$username,$password) or die("There was an error.");
 
-				$query = "select * from csc322.books";
+				$query = "select * from csc322.books where owner = ".$_SESSION['user_id'];
 
 				$result = mysql_query($query) or die(mysql_error());
 				

@@ -7,6 +7,11 @@ $bookid =  $_GET['bid'];
 $query = "select * from csc322.books where book_id =".$_GET['bid'];
 $result = mysql_query($query) or die(mysql_error());
 $book = mysql_fetch_array($result);
+
+if( isset($_POST['inlineRadioOptions']) )
+{
+	echo $_POST['inlineRadioOptions'];
+}
 ?>
   
   <!-- Content of page -->
@@ -20,24 +25,25 @@ $book = mysql_fetch_array($result);
 	  Rating: 
 			<form action="" method="post"> 
 				<label class="radio-inline">
-				  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+				  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value=1> 1
 				</label>
 				<label class="radio-inline">
-				  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+				  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value=2> 2
 				</label>
 				<label class="radio-inline">
-				  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+				  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value=3> 3
 				</label> 
 				<label class="radio-inline">
-				  <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option3"> 4
+				  <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value=3> 4
 				</label> 
 				<label class="radio-inline">
-				  <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option3"> 5
+				  <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value=3> 5
 				</label> 
 				
 				<button class="btn btn-sm btn-default pull-right" type="submit">Submit </button>
 			</form>
 	  </li>
+
 	  <li class="list-group-item">
 		
 		Description: <?php echo 'fix'; ?>

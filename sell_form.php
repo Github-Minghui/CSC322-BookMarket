@@ -21,7 +21,7 @@ if (empty($_POST) === false){
 
 	 
 	$target = "image/"; 
-	$target = $target . basename( $_FILES['book_cover']['name']) ; 
+	$target = $target . basename( $_FILES['book_cover']['tmp_name']) ; 
 	$ok=1; 
 	if(move_uploaded_file($_FILES['book_cover']['tmp_name'], $target)) 
 	{
@@ -38,7 +38,7 @@ if (empty($_POST) === false){
 	$hostname = "localhost";
 	$db = mysql_connect($hostname,$username,$password) or die("There was an error.");
 
-	$query = "INSERT INTO csc322.books (`book_id`, `title`, `author`, `genre`, `price`, `book_condition`, `book_cover`, `rating`, `owner`) VALUES (NULL,'".$booktitle."' ,'".$bookauthor."', '".$bookgenre."', '".$bookprice."', '".$bookcondition."','".$book_cover."', NULL, '2')";
+	$query = "INSERT INTO csc322.books (`book_id`, `title`, `author`, `genre`, `price`, `book_condition`, `book_cover`, `rating`, `owner`) VALUES (NULL,'".$booktitle."' ,'".$bookauthor."', '".$bookgenre."', '".$bookprice."', '".$bookcondition."','".$book_cover."', NULL, ".$_SESSION['user_id'].");";
 
 	//mysql_query("use csc322");
 	$result = mysql_query($query);
