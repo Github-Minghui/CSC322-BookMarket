@@ -204,12 +204,12 @@ books or sellers 	|		  |					  |			X		   |
 will be suspended	|		  |					  |					   |
 ____________________|_________|___________________|____________________|
 user removed from	|		  |					  |					   |
-service will be giv-|		  |					  |			X		   |
+service will be giv-|		  |			X		  |					   |
 en one last chance	|		  |					  |					   |
 ____________________|_________|___________________|____________________|
 Any user in a black	|		  |					  |					   |
 list will not be al-|		  |					  |					   |
-lowed to reapply to	|		  |					  |			X		   |
+lowed to reapply to	|	X	  |					  |					   |
 the service			|		  |					  |					   |
 ____________________|_________|___________________|____________________|
 if user does not ha-|		  |					  |					   |
@@ -219,7 +219,7 @@ they will be turned	|		  |					  |					   |
 down				|		  |					  |					   |
 ____________________|_________|___________________|____________________|
 Users can search and|		  |					  |					   |
-compare the same 	|		  |					  |			X		   |	
+compare the same 	|		  |			X		  |					   |	
 books, if exist		|		  |					  |					   |
 ____________________|_________|___________________|____________________|
 system GUI			|  		  |					  |					   |
