@@ -10,16 +10,20 @@ if( isset($_POST['inlineRadioOptions']) )
 {
 	$query = "insert into csc322.ratings(book_id,rating,user_id) values(".$bookid.",".$_POST['inlineRadioOptions'].",".$book['owner'].");";
 	$result = mysql_query($query);	
+	echo $result;
 	if($result===true){}
 	else{echo mysql_error();};
 }
 
+$name = $user_data['first_name'];
+$comment = $_POST['comment'];
+
 if( isset($_POST['comment']) )
 {
-	$query = "insert into comments(comment_id,book_id,comment,user_id) values(null,".$bookid.",".$_POST['comment'].",".$book['owner'].");";
+	$query = "insert into comments(book_id,comment,user_name) values(".$bookid.",'$comment','$name');";
 	$result = mysql_query($query);	
-	echo $result;
 	if($result===true){
+		echo $result;
 	}else{
 	echo mysql_error();};
 }
@@ -114,10 +118,11 @@ if( isset($_POST['buy']) )
 	  <li class="list-group-item">
 		<form action="" method="post">
 				Username:<strong><?php echo $user_data['first_name']?></strong>
-				<textarea type="text" name="comment" class="form-control"  placeholder="Please leave some comments to this book."></textarea>
+				<input type="text" name="comment" class="form-control"  placeholder="Please leave some comments to this book.">
 				<button type="submit" value="Log in" class="btn btn-default" > Submit Comment</button>
 		</form>
 	  </li>
+	  
 	  <li class="list-group-item">  
 			<div class="comments-list">
 				<ul class="comments-holder-ul">
@@ -125,7 +130,6 @@ if( isset($_POST['buy']) )
 						$getquery=mysql_query("SELECT * FROM comments ORDER BY comment_id DESC");
 						while($rows=mysql_fetch_assoc($getquery)){
 							$comment_id = $rows['comment_id'];
-							$name = $rows['name'];
 							$comment = $rows['comment'];
 							//$delete = "<a href=\"delete_comment.php?id=" . $comment_id ."\">Delete</a>";
 							echo '<table>'.'<tr>'.'<td>'.'<li class=\"comment-holder\" id=\"_'.$comment_id.'\"\>'.

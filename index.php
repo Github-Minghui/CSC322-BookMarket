@@ -9,8 +9,8 @@ include 'includes/overall/header.php';
      <h3>Welcome to Libro!</h3>
     </div> 
   </div>
-    <?php include 'includes/widgets/topRating.php';?> 
 	<?php include 'includes/widgets/recommendation.php';?>
+    <?php include 'includes/widgets/topRating.php';?> 
 </div>  
 
 <div class="col-md-3 col-sm-3 col-xs-12 ">
