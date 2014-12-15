@@ -96,6 +96,7 @@ if( isset($_POST['buy']) )
 	  <li class="list-group-item">
 		Condition: <?php echo $book['book_condition']; ?>
 	  </li>
+	  
 	  <li class="list-group-item">
 		Comments for <strong><em><?php echo $book['title']; ?></em></strong> from users:<br>
 		// Loop through database, output $book_data['comment'].
@@ -108,7 +109,7 @@ if( isset($_POST['buy']) )
     </div>
   </div>
   <?php }?>
-  <div class="col-md-3 col-xs-12">
+  <div class="col-md-3 col-sm-3 col-xs-12">
   	<?php include 'includes/widgets/side_recommendation.php';?>
   </div> 
 <?php 
