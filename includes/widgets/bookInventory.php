@@ -27,11 +27,11 @@
 				echo $row['book_cover'];
 				echo '"  height = "150px" width = "150px"> <!--get image and size-->
 						<span>';
-				echo $row['author'];
-				echo '</span><br><!--this is meant to type the author\'s name--> 
-					<span class="text-muted">';
-				echo $row['genre'];				
-				echo'</span> <!-- this is for genre etc.--> 
+				echo $row['title'];
+				echo '</span><br><!--this is meant to type the title\'s name--> 
+					<span class="text-muted">$';
+				echo $row['price'];				
+				echo'</span> <!-- this is for price etc.--> 
 				</a>
 					</div>';
 				//echo "</td><td>"; 
