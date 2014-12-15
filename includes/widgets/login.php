@@ -15,7 +15,7 @@
 		<!-- <button type="submit" class="btn btn-default"> Join Libro!</button> -->
 	  </li>
 	  <li class="list-group-item">
-		|<a href="register.php"> Join Library today!</a><br>
+		|<a href="register.php"> Sign up now?!</a><br>
 		<!--|<a href= "forgotpassword.php"> Forgot password?(<-TODO)</a><br>-->
 		|<a href= "help.php"> Need help?</a><br>
 	  </li>
