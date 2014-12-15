@@ -61,7 +61,7 @@ Then, create following tables on database: csc322,
 		);
 
 
-After that, Clone this folder under /opt/lampp/htdoc folder.
+After that, Clone <a href="https://github.com/Github-Minghui/CSC322-BookMarket.git">this</a> folder under /opt/lampp/htdoc folder.
 
 ------------------------------------------------------------------------------
 Functionality
@@ -125,7 +125,7 @@ recomendations
 	recommendations will be based off the genre of the books that the user
 	will buy.  For example, if a user were to buy many fantasy fiction 
 	books, then the function will suggest more books that fall under that
-	genre rather than mystery, romance novels, historical, or other genres.
+	rating rather than genres like mystery, romance novels, historical, or other genres.
 	Recomendations can be found on multiple pages including:
 		buy page,
 		sell page,
@@ -143,7 +143,7 @@ top rated
 		Price,
 		Condition,
 		Description.
-	The service shows the top 6 books in total in this feature.
+	The service shows the top 4 books in total in this feature.
 ______________________________________________________________________________
 help
 	The help page displays information that the users can see if they need 
