@@ -18,10 +18,11 @@ Create a new user with following info:
 		<li>Grant all privileges on wildcard name (username\_%).</li>
 		<li>Global privileges: Check All </li>
 	</ul>
+	
 Then, create following tables on database: csc322,
 
 		create table users(
-			user_id int(11) primary key, -- set this to "auto increment"
+			user_id int(11) primary key,--auto-increment
 			username varchar(32) not null,
 			password varchar(32) not null,
 			first_name varchar(32) not null,
@@ -31,7 +32,7 @@ Then, create following tables on database: csc322,
 		);
 
 		create table books(
-			book_id int(11) primary key, -- set this to "auto increment"
+			book_id int(11) primary key, --auto-increment
 			title varchar(32) not null,
 			author varchar(32) not null,
 			genre varchar (32) not null,
@@ -39,18 +40,13 @@ Then, create following tables on database: csc322,
 			book_condition varchar(32) not null,
 			book_cover varchar(1024),
 			rating int(11),
-			owner int(11),
-			sold tinyint(1) not null --set this "as define 0"
-			--adding references between two tables
-			--set foreign_key_checks=0;(IGNORE)
-			ALTER TABLE books ADD CONSTRAINT
-					FOREIGN KEY (owner)
-					REFERENCES users(user_id);
+			owner int(11) REFERENCES users(user_id),
+			sold tinyint(1) not null --set'AsDefine0'
 		);
 
 
 		CREATE table ratings (
-		id int(11) primary key,  --auto-increment
+		  id int(11) primary key,  --auto-increment
 		  book_id int(11) NOT NULL,
 		  rating int(11) NOT NULL,
 		  user_id int(11) NOT NULL

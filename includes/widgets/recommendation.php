@@ -5,7 +5,6 @@ if (isset($_SESSION['user_id'])){
 		$query = "select * from ratings ORDER BY rating DESC LIMIT 4;";
 }
 $result = mysql_query($query) or die(mysql_error());
-echo $result;
 ?>
 
 <div class="panel panel-warning">    <!-- Start of Recommandations -->
