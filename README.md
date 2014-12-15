@@ -40,6 +40,7 @@ Then, create following tables on database: csc322,
 			book_cover varchar(1024),
 			rating int(11),
 			owner int(11),
+			sold tinyint(1) not null --set this "as define 0"
 			--adding references between two tables
 			--set foreign_key_checks=0;(IGNORE)
 			ALTER TABLE books ADD CONSTRAINT
