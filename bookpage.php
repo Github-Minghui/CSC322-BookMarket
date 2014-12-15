@@ -12,7 +12,6 @@ if( isset($_POST['inlineRadioOptions']) )
 	$result = mysql_query($query);	
 	if($result===true){}
 	else{echo mysql_error();};
-
 }
 ?>
 
@@ -21,8 +20,27 @@ if( isset($_POST['buy']) )
 {
 	$query = "update csc322.books set sold = 1 where book_id = ".$bookid;
 	mysql_query($query);
-	echo('<h1> Thank you for your purchase </h1>');	
-}
+?>
+  <div class="col-md-12 col-xs-12 ">
+    <div class= "panel panel-default">
+      <div class="panel-heading">
+		<h1> Thank you for your purchase </h1>	
+	  </div>
+	  <li class="list-group-item">
+		Order Transcation:
+		<br>
+		Book name: <?php echo $book['title']; ?>; 
+		<br>
+		Author: <?php echo $book['author']; ?>
+		<br>
+		Price: <?php echo $book['price']; ?> 
+		<br>
+
+	  </li>
+	</div>
+  </div>
+<?php
+}else{
 ?>
 	
 	<!--UPDATE books-->
@@ -90,5 +108,7 @@ if( isset($_POST['buy']) )
     </div>
   </div>
   
-<?php include 'includes/overall/footer.php';?>
+<?php 
+}
+include 'includes/overall/footer.php';?>
 
