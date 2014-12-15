@@ -60,10 +60,9 @@ if( isset($_POST['buy']) )
 	  </li>
 
 	  <li class="list-group-item">
-		<img src=" <?php echo '/CSC322-BookMarket/'.$book['book_cover']; ?> ">
+		<img src=" <?php echo '/CSC322-BookMarket/'.$book['book_cover']; ?>" height = "150px" width = "150px">
 		<br>
-		Description: <?php //echo $book['description']; 
-                             ?>
+		Description: <?php echo $book['description']; ?>
 	  </li>
 	  <li class="list-group-item">
 		Price: <?php echo $book['price']; ?>
