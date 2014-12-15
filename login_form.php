@@ -2,7 +2,6 @@
 include 'core/init.php';
 include 'includes/overall/header.php';
 ?>
-
   <div class="col-md-6 col-xs-12">
     <div class= "panel panel-primary">
       <div class="panel-heading">
