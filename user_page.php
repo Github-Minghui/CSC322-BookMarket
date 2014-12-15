@@ -10,8 +10,8 @@ include 'includes/overall/header.php';
        <h3><?php echo $user_data['first_name'];?>'s page </h3>
       </div>
     </div>
-	  <?php include 'includes/widgets/boughtBook.php';?>	
-	  <?php include 'includes/widgets/bookInventory.php';?>
+	 <?php include 'includes/widgets/boughtBook.php';?>	
+	 <?php include 'includes/widgets/bookInventory.php';?>
   </div> 
   <div class="col-md-3 col-xs-12">
   	<?php include 'includes/widgets/side_recommendation.php';?>
