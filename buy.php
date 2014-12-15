@@ -10,39 +10,27 @@ include 'includes/overall/header.php';
        <h3> Ready for a new book? Buy it today!</h3>
       </div>
   	  <div class="list-group-item">
-	    <div class="row">
-
+	    <div class="row">			
 			<?php
-				$username = "csc322";
-				$password = "123";
-				$hostname = "localhost";
-				$db = mysql_connect($hostname,$username,$password) or die("There was an error.");
+			$query = "select * from csc322.books where owner != ".$_SESSION['user_id'];
 
-				$query = "select * from csc322.books where owner != ".$_SESSION['user_id'];
-
-				$result = mysql_query($query) or die(mysql_error());
-				
-				while($row = mysql_fetch_array( $result )) {
-				echo '<div class="col-md-3"> <!--this is the size of the box of the image--> 
-				<a href="bookpage.php/?bid='.$row['book_id'].'" class="thumbnail">
-					<img src="';
-				echo $row['book_cover'];
-				echo '"  height = "150px" width = "150px"> <!--get image and size-->
-						<span>';
-				echo $row['title'];
-				echo '</span><br><!--this is meant to type the author\'s name--> 
-					<span class="text-muted">$';
-				echo $row['price'];				
-				echo'</span> <!-- this is for genre etc.--> 
-				</a>
-					</div>';
-				} 
-
+			$result = mysql_query($query) or die(mysql_error());
+			while($row = mysql_fetch_array( $result )) {
 			?>
-
+			
+			<div class="col-md-3"> 
+				<a href="bookpage.php/?bid=<?php echo $row['book_id']?>" class="thumbnail">	
+					<img src="<?php echo $row['book_cover']?>" height = "150px" width = "150px"> <!--get image and size-->
+					<span><?php echo $row['title']?></span> <!--this is meant to type the author\'s name--> 
+					<br>
+					<span class="text-muted">$<?php echo $row['price']?></span> <!-- this is for genre etc.--> 
+					</a>
+			</div>
+			<?php	
+				} 
+			?>
         </div>   
 	  </div>
-      <br>
     </div>
 	  <?php include 'includes/widgets/topRating.php';?>
   </div> 

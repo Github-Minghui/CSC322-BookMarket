@@ -1,37 +1,37 @@
-    <div class="panel panel-success">    <!-- Start of Recommandations -->
-      <div class="panel-heading">
-        <span>Recommendations</span>
-      </div>
-	  <li class="list-group-item">
-        <div class="row">
-			<div class="col-md-12"> <!--this is the size of the box of the image--> 
-				<a href="bookpage.php" class="thumbnail">
-					<img src="image/rec_book1.png"  height = "150px" width = "150px"> <!--get image and size-->
-						<span>J.K. Rowling</span><br><!--this is meant to type the author's name--> 
-					<span class="text-muted">Fantasy Fiction</span> <!-- this is for genre etc.--> 
+ <?php
+if (isset($_SESSION['user_id'])){
+		$query = "select * from ratings where user_id != ".$_SESSION['user_id']." ORDER BY rating DESC LIMIT 4;";
+}else{
+		$query = "select * from ratings ORDER BY rating DESC LIMIT 4;";
+}
+$result = mysql_query($query) or die(mysql_error());
+?>
+    
+<div class="panel panel-success">    <!-- Start of Recommandations -->
+  <div class="panel-heading">
+	<span>Recommendations</span>
+  </div>
+  <li class="list-group-item">
+	<div class="row">			
+		<?php
+			while($row = mysql_fetch_array($result)) {
+			// Getting book ascocited with rating
+			$query = "select * from books where book_id =".$row['book_id'];
+			$r = mysql_query($query) or die(mysql_error());
+			$book = mysql_fetch_array($r);
+		?>
+		
+		<div class="col-md-12"> 
+			<a href="bookpage.php/?bid='<?php echo $row['book_id']?>'" class="thumbnail">	
+				<img src="<?php echo $book['book_cover']?>" height = "150px" width = "150px"> <!--get image and size-->
+				<span><?php echo $book['title']?></span> <!--this is meant to type the author\'s name--> 
+				<br>
+				<span class="text-muted">$<?php echo $book['price']?></span> <!-- this is for genre etc.--> 
 				</a>
-			</div>
-			<div class="col-md-12"> <!--this is the size of the box of the image--> 
-				<a href="bookpage.php" class="thumbnail">
-					<img src="image/rec_book2.png"  height = "150px" width = "150px"> <!--get image and size-->
-						<span>J.K. Rowling</span><br><!--this is meant to type the author's name--> 
-					<span class="text-muted">Fantasy Fiction</span> <!-- this is for genre etc.--> 
-				</a>
-			</div>
-			<div class="col-md-12"> <!--this is the size of the box of the image--> 
-				<a href="bookpage.php" class="thumbnail">
-					<img src="image/rec_book3.png"  height = "150px" width = "150px"> <!--get image and size-->
-						<span>J.K. Rowling</span><br><!--this is meant to type the author's name--> 
-					<span class="text-muted">Fantasy Fiction</span> <!-- this is for genre etc.--> 
-				</a>
-			</div>
-			<div class="col-md-12"> <!--this is the size of the box of the image--> 
-				<a href="bookpage.php" class="thumbnail">
-					<img src="image/rec_book4.png"  height = "150px" width = "150px"> <!--get image and size-->
-						<span>J.K. Rowling</span><br><!--this is meant to type the author's name--> 
-					<span class="text-muted">Fantasy Fiction</span> <!-- this is for genre etc.--> 
-				</a>
-			</div>
-        </div>                       
-      </li>
-    </div>    <!-- End of Recommandations -->
+		</div>
+		<?php	
+			} 
+		?>
+	</div>          
+  </li>
+</div>    <!-- End of Recommandations -->

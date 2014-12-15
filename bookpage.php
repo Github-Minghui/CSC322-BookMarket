@@ -21,7 +21,7 @@ if( isset($_POST['buy']) )
 	$query = "update csc322.books set sold = 1 where book_id = ".$bookid;
 	mysql_query($query);
 ?>
-  <div class="col-md-12 col-xs-12 ">
+  <div class="col-md-9 col-sm-9 col-xs-12 ">
     <div class= "panel panel-default">
       <div class="panel-heading">
 		<h1> Thank you for your purchase </h1>	
@@ -48,7 +48,7 @@ if( isset($_POST['buy']) )
 	<!--WHERE--> 
 
   <!-- Content of page -->
-  <div class="col-md-12 col-xs-12 ">
+  <div class="col-md-9 col-sm-9 col-xs-12 ">
     <div class= "panel panel-default">
       <div class="panel-heading">
        <h2><strong><em><?php echo $book['title']; ?></em></strong></h2>
@@ -107,8 +107,10 @@ if( isset($_POST['buy']) )
 	  </li>
     </div>
   </div>
-  
+  <?php }?>
+  <div class="col-md-3 col-xs-12">
+  	<?php include 'includes/widgets/side_recommendation.php';?>
+  </div> 
 <?php 
-}
 include 'includes/overall/footer.php';?>
 
