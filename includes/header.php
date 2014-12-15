@@ -13,7 +13,7 @@
 
     <div class="collapse navbar-collapse" id="navbar-collapse-1">
 		<?php include 'includes/nav-menu.php';?>
-  		<?php include 'includes/nav-left.php';?>
+  		<?php #include 'includes/nav-left.php';?>
   		<?php include 'includes/nav-right.php';?>
 	</div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
