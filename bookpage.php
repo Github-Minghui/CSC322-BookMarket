@@ -13,6 +13,16 @@ if( isset($_POST['inlineRadioOptions']) )
 	if($result===true){}
 	else{echo mysql_error();};
 }
+
+if( isset($_POST['comment']) )
+{
+	$query = "insert into comments(comment_id,book_id,comment,user_id) values(null,".$bookid.",".$_POST['comment'].",".$book['owner'].");";
+	$result = mysql_query($query);	
+	echo $result;
+	if($result===true){
+	}else{
+	echo mysql_error();};
+}
 ?>
 
 <?php
@@ -96,17 +106,40 @@ if( isset($_POST['buy']) )
 	  <li class="list-group-item">
 		Condition: <?php echo $book['book_condition']; ?>
 	  </li>
-	  
-	  <li class="list-group-item">
-		Comments for <strong><em><?php echo $book['title']; ?></em></strong> from users:<br>
-		// Loop through database, output $book_data['comment'].
-		</li>
-	  <li class="list-group-item">
-		Comment:
-		<textarea class="form-control" rows="3" placeholder="Free feel to leave your thought about this book."></textarea>
-		<button class="btn btn-sm btn-default" type="submit">Submit </button>
-	  </li>
     </div>
+	<div class= "panel panel-default">
+	  <div class="panel-heading">
+	   <h5> User feedback for <strong><?php echo $book['title']; ?></strong></h5>
+	  </div>
+	  <li class="list-group-item">
+		<form action="" method="post">
+				Username:<strong><?php echo $user_data['first_name']?></strong>
+				<textarea type="text" name="comment" class="form-control"  placeholder="Please leave some comments to this book."></textarea>
+				<button type="submit" value="Log in" class="btn btn-default" > Submit Comment</button>
+		</form>
+	  </li>
+	  <li class="list-group-item">  
+			<div class="comments-list">
+				<ul class="comments-holder-ul">
+					<?php 
+						$getquery=mysql_query("SELECT * FROM comments ORDER BY comment_id DESC");
+						while($rows=mysql_fetch_assoc($getquery)){
+							$comment_id = $rows['comment_id'];
+							$name = $rows['name'];
+							$comment = $rows['comment'];
+							//$delete = "<a href=\"delete_comment.php?id=" . $comment_id ."\">Delete</a>";
+							echo '<table>'.'<tr>'.'<td>'.'<li class=\"comment-holder\" id=\"_'.$comment_id.'\"\>'.
+									'<div class=\"comment-body\">'.
+										'<h3 class=\"username-field">'.$name.'</h3>'.'<br/>'.
+										'<div class=\"comment-text">'.$comment.'</div>'.'<br/>'.
+									'</div>'.
+								'</li>'.'</td>'.'</tr>'.'</table>';
+						}
+					?>
+				</ul>
+			</div>
+		</li>
+	</div>
   </div>
   <?php }?>
   <div class="col-md-3 col-sm-3 col-xs-12">
