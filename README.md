@@ -55,8 +55,9 @@ Then, create following tables on database: csc322,
 
 		create table comments(
 			comment_id int(11) primary key, --auto-increment
-			comment varchar(32),
-			user_id int(11)
+			comment varchar(1024),
+			book_id int(11) references books(book_id),
+			user_name int(11) references users(first_name)
 		);
 
 
