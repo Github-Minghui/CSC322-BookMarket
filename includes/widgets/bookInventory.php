@@ -11,7 +11,7 @@
 				$hostname = "localhost";
 				$db = mysql_connect($hostname,$username,$password) or die("There was an error.");
 
-				$query = "select * from csc322.books where owner = ".$_SESSION['user_id'];
+				$query = "select * from csc322.books where (owner = ".$_SESSION['user_id']." and sold != 1); ";
 
 				$result = mysql_query($query) or die(mysql_error());
 				
