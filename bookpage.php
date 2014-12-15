@@ -15,7 +15,20 @@ if( isset($_POST['inlineRadioOptions']) )
 
 }
 ?>
-  
+
+<?php
+if( isset($_POST['buy']) )
+{
+	$query = "update csc322.books set sold = 1 where book_id = ".$bookid;
+	mysql_query($query);
+	echo('<h1> Thank you for your purchase </h1>');	
+}
+?>
+	
+	<!--UPDATE books-->
+	<!--Set sold = 1-->
+	<!--WHERE--> 
+
   <!-- Content of page -->
   <div class="col-md-12 col-xs-12 ">
     <div class= "panel panel-default">
@@ -54,10 +67,14 @@ if( isset($_POST['inlineRadioOptions']) )
 	  </li>
 	  <li class="list-group-item">
 		Price: <?php echo $book['price']; ?>
-		<p class="text-right">
-		<button action="" method="" class="btn btn-sm btn-danger" type="submit">Add <span class="glyphicon glyphicon-shopping-cart"> </		span></button>
-		<button action="" method="" class="btn btn-sm btn-primary" type="submit">Buy it</button>	  
-		</p>		
+		
+		<form action="" method ="post">
+			<p class="text-right">
+			<input type="hidden" name= "buy">
+			<button class="btn btn-sm btn-primary" type="submit">Buy it</button>
+			</p>
+		</form>	  
+		
 	  </li>
 	  <li class="list-group-item">
 		Condition: <?php echo $book['book_condition']; ?>
